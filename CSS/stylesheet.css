@@ -1,0 +1,358 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+/*     font-family: "Prompt", sans-serif;
+ */}
+
+/*VV Debajo de esto esta el CSS Global VV*/
+
+h1{
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+}
+a:active {
+    color: red;
+}
+a:hover {
+    color: aliceblue;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    width: 100%;
+}
+
+.linea_divisoria{
+height: 1px;
+border: 3px solid rgb(105, 130, 105);
+margin: 1% 2% 1% 2%;
+}
+
+/*^^ Cierro CSS Global ^^*/
+/*VV Debajo de esto esta el CSS especifico por contenedores VV*/
+
+/* [[HEADER]] ===========================================
+*/
+
+header{
+    background-color:rgb(105, 130, 105);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+.head_info{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: rgb(154, 126, 80);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    height: 70px;
+    width: 100vw;
+}
+
+header .logo {
+    margin: 10px 5px 5px 25px;
+    width: 120px;
+}
+
+header form{
+    margin: 0px;
+    padding: 0.5% 2%;
+}
+
+header input{
+    margin: 0px;
+    background-color:burlywood;
+    display: block;
+}
+
+.caja_de_busqueda{
+    width: 100%;
+    height: 40px;
+}
+
+#barra_busqueda{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+#accesos{
+    display: inline-block;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* header #accesos a{
+    background: none;
+    border: 1px solid black;
+    padding: 0.5%;
+    margin: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+ */
+
+.barra_nav_pag{
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header nav {
+    width: 100%;
+}
+
+
+
+.botones_del_nav{
+    background: rgb(185, 155, 107);
+    border: 1px solid black;
+    padding: 0.5%;
+    margin: 5px;
+    height: 50px;
+    width: 24%;
+    display: inline-flex;
+    list-style: none;
+    align-content: center;
+    justify-content: center;
+}
+
+.botones_del_nav:hover{
+    background: rgb(185, 155, 107);
+    border: 1px solid gainsboro;
+    padding: 0.5%;
+    margin: 5px;
+    height: 50px;
+}
+
+
+
+/* [[FIN HEADER]] ===========================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+/* [[Caja del Main]] ===========================================
+ */
+
+main{
+    background-color: rgb(185, 155, 107);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    margin: 0px 0px 0px 0px;
+    gap: 10px;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+main section div li{
+    padding: 2%;
+    border: 2px solid gray;
+}
+
+.base_columna_izquierda{
+    box-sizing: border-box;
+    display: inline;
+    height: 100%;
+    margin:15px 0px 5px 15px;
+    width: 70%;  
+}
+
+.base_columna_derecha{ 
+    box-sizing: content-box;
+    display: block;
+    float: none;
+    line-height: 14px;
+    position: static;
+    z-index: auto;
+    border: none;
+    min-height: 100%;
+    width: 25%;
+    border: 2px solid gray;
+    margin: 15px 10px 0px 10px;
+}
+
+
+/* [[FIN cajas del Main]] ============
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+
+
+
+/* [[Columna izquierda]] ===================
+ */
+
+.base_columna_izquierda .Carrousel{
+    display: flex;
+    padding: 10% 10%;
+    border: 2px solid ;
+    background-color: rgb(241, 219, 191);
+    margin: 0 0 2% 0;
+}
+
+.titulo_section{
+    margin: 1.5% 2% 1.5% 2%;
+}
+
+.base_columna_izquierda .nuevas_publicaciones{
+    display: block;
+    align-content: center;
+    margin: 5px 5px 5px 5px ;
+}
+
+.base_columna_izquierda .nuevas_publicaciones 
+.contenidos_vista_inicio ul li{
+    display: flex;
+}
+.base_columna_izquierda .nuevas_publicaciones 
+.contenidos_vista_inicio img{
+    display: inline;
+}
+
+.IMGCONT{
+    height: 120px;
+    width: 60px;
+}
+
+.cajas_vista_inicio{
+    display: flex;
+        background-color: rgb(241, 219, 191);
+    margin: 0 0 1% 0;
+
+}
+
+/* .contenidos_vista_inicio{
+    a
+}
+ */
+.Carrousel{
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.boton_para_expandir{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: brown;
+    width: 12%;
+    padding: 1%;
+    flex-direction: row-reverse;
+
+    
+}
+
+/* [[FIN Columna izquierda]] ===================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* [[Columna Derecha]] ===========================================
+ */
+
+.base_columna_derecha .drop_archivo{ 
+    text-align: center;
+    padding: 10%;
+    border: 2px solid gray;
+    margin: 5px;
+    height: 200px;
+    background-color: rgb(241, 219, 191);
+
+}
+
+.base_columna_derecha .drop_archivo button{
+    margin: 10px 0px;
+    
+}
+
+.base_columna_derecha .drop_archivo:hover{
+    background-color: rgb(252, 181, 59);
+    text-align: center;
+    padding: 10%;
+    border: 2px solid gray;
+    margin: 5px;
+
+}
+
+.base_columna_derecha article ul li a{
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: medium;
+}
+
+.base_columna_derecha article ul li p{
+    margin: 10px 0 5px 0;
+}
+
+.base_columna_derecha article h4{
+    margin: 0 0 10px 0;
+}
+
+.base_columna_derecha .info_columna_der{
+    padding: 0;
+    margin: 15px;
+    background-color: rgb(241, 219, 191);
+}
+
+.info_columna_der a{
+    font-palette: rgb(186, 45, 11);
+}
+
+/* [[Footer]] ===========================================
+ */
+ 
+footer{
+    background-color: rgb(105, 130, 105);
+    font-family: Arial, Helvetica, sans-serif; font-size: small;
+    padding: 1.5%;
+}
+/* [[FIN Footer]] ===========================================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+
+/* [[Contenido de las distintas paginas]] ======================
+*/
+.pagina_login{
+    margin: 5% 30% 35% 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
+
+.lista_contenido_catalogo{
+    margin: 0 2% 0 2vw;
+}
+
