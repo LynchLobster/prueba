@@ -41,55 +41,105 @@
         <div class="base_pagina">
             <section class="base_columna_izquierda">
                 <div class="primer_bloque">
-                    <p>aaa</p>
+                    <div class="carrusel">
+
+                        <!-- Botones ocultos para hacer funcionar el carrousel -->
+                        <input type="radio" name="slides" id="slide1" checked>
+                        <input type="radio" name="slides" id="slide2">
+                        <input type="radio" name="slides" id="slide3">
+
+                        <!-- Contenedor general de las slides -->
+                        <div class="slides">
+
+                            <div class="slide" id="s1">
+                                <a href="./paginas/error.html">
+                                    <div class="imagen" style="background-image:url(img/banner-4.jpg)"></div>
+                                </a>
+                                <p class="descripcion">Esta es la imagen 1</p>
+                            </div>
+
+                            <div class="slide" id="s2">
+                                <a href="#">
+                                    <div class="imagen" style="background-image:url(img/banner-2.jpg)"></div>
+                                </a>
+                                <p class="descripcion">Esta es la imagen 2</p>
+                            </div>
+
+                            <div class="slide" id="s3">
+                                <a href="#">
+                                    <div class="imagen" style="background-image:url(img/banner-3.jpg)"></div>
+                                </a>
+                                <p class="descripcion">Esta es la imagen 3</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Botones visibles para cambiar entre slides -->
+                        <div class="controles">
+                            <label for="slide1"></label>
+                            <label for="slide2"></label>
+                            <label for="slide3"></label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="separador">
+                <div class="separador_columna_izq">
                     <div><h2 class="titulo_section">Nuevas Publicaciones</h2></div>
                     <div class="linea_divisoria"> </div>
                 </div>
 
+
                 <article class="nuevas_publicaciones"><!--La lista de Nuevo Contenido-->
-                    <ul class="contenidos_vista_inicio"><!--Mostrar los 5 mas nuevos-->
-                        <li class="cajas_vista_inicio">
-                            <img class="IMGCONT" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F4706%2F4706330.png&f=1&nofb=1&ipt=7fc069b24edb116eb576234b87c1c2ab18a2d835ede30041713a7a70b0168712" 
-                                alt="IMGCONT1">
-                            <div class="contenido_cajas_vista_inicio">
-                                <a href="./paginas/publicación.html">Contenido nuevo 1</a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                    <ul class="contenidos_vista_home"><!--Mostrar los 5 mas nuevos-->
+                        <li class="cajas_vista_home">
+                            <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT1" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
+                            <div class="contenido_cajas_vista_home">
+                                <a class="titulo_contenido_home" href="paginas/publicacion.html">Contenido nuevo 1</a>
+                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
                             </div>
+                            <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
+                                <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                            </a>
                         </li>
-                        <li class="cajas_vista_inicio">
-                            <img class="IMGCONT" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F4706%2F4706330.png&f=1&nofb=1&ipt=7fc069b24edb116eb576234b87c1c2ab18a2d835ede30041713a7a70b0168712" 
-                                alt="IMGCONT2">
-                            <div class="contenido_cajas_vista_inicio">
-                                <a href="./paginas/publicación.html">Contenido nuevo 2</a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                        <li class="cajas_vista_home">
+                            <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT2" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
+                            <div class="contenido_cajas_vista_home">
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 2</a>
+                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
                             </div>
+                            <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
+                                <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                            </a>
                         </li>
-                        <li class="cajas_vista_inicio">
-                            <img class="IMGCONT" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F4706%2F4706330.png&f=1&nofb=1&ipt=7fc069b24edb116eb576234b87c1c2ab18a2d835ede30041713a7a70b0168712" 
-                                alt="IMGCONT3">
-                            <div class="contenido_cajas_vista_inicio">
-                                <a href="./paginas/publicación.html">Contenido nuevo 3</a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                        <li class="cajas_vista_home">
+                            <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT3" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
+                            <div class="contenido_cajas_vista_home">
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 3</a>
+                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
                             </div>
+                            <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
+                                <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                            </a>
                         </li>
-                        <li class="cajas_vista_inicio">
-                            <img class="IMGCONT" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F4706%2F4706330.png&f=1&nofb=1&ipt=7fc069b24edb116eb576234b87c1c2ab18a2d835ede30041713a7a70b0168712" 
-                                alt="IMGCONT4">
-                            <div class="contenido_cajas_vista_inicio">
-                                <a href="./paginas/publicación.html">Contenido nuevo 4</a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                        <li class="cajas_vista_home">
+                            <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT4" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
+                            <div class="contenido_cajas_vista_home">
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 4</a>
+                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
                             </div>
+                            <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
+                                <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                            </a>
                         </li>
-                        <li class="cajas_vista_inicio">
-                            <img class="IMGCONT" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F4706%2F4706330.png&f=1&nofb=1&ipt=7fc069b24edb116eb576234b87c1c2ab18a2d835ede30041713a7a70b0168712" 
-                                alt="IMGCONT5">
-                            <div class="contenido_cajas_vista_inicio">
-                                <a href="./paginas/publicación.html">Contenido nuevo 5</a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                        <li class="cajas_vista_home">
+                            <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT5" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
+                            <div class="contenido_cajas_vista_home">
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 5</a>
+                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
                             </div>
+                            <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
+                                <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                            </a>
                         </li>
                     </ul>
                     <a href="./paginas/catalogo.html" class="boton_para_expandir"> Ver Más...</a>
@@ -99,52 +149,88 @@
             <section class="base_columna_derecha"><!--Este va a contener toda la columna derecha-->
 
                 <div class="primer_bloque">   
-                    <div class="drop_archivo"><!--Lugar de carga de los archvios-->
-                        <h3>Sube tus archivos Aquí</h3>
-                        <button>Arrastra Aquí</button>
-                        <input type="file" title="Propone archivos Aquí" hidden>
+                    <div class="drop_archivo">
+                        <h3>Sube tus archivos</h3>
+                        <h6>Haz click aquí</h6>
+                        <label for="archivo_subido" class="drop_label"></label>
+                        <input type="file" id="archivo_subido" multiple>
                     </div>
                 </div>
 
-                <div class="separador">
-                    <h4 class="titulo_section">Discuciones actuales</h4>
+                <div class="separador_columna_der">
+                    <h2 class="titulo_section">Discusiones actuales</h2>
                     <div class="linea_divisoria"> </div>
                 </div>
 
                 <article class="info_columna_der"><!--Este debe estas segunfo en la columna-->
                     <ul><!--Mostrar los 5 mas nuevos-->
-                        <li class="">
-                            <a href="#">¿Porque X frente a Y?</a> 
-                            <p class="discucion_reducida">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem aut perspiciatis magnam facere labore molestiae adipisci? Consectetur iure illum minima nisi velit, deserunt laudantium, temporibus harum atque dolorem repellat saepe!</p></li>
-                            <p>- Lego Lass</p> <p>200 respuestas...</p>
-                        <li>
-                            <a href="#" >Bueno pero lento, es...</a> 
-                            <p class="discucion_reducida">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nemo a? Vitae est, quasi quo ex mollitia ipsa culpa? Provident voluptates esse corporis repellat veritatis eius aperiam, recusandae enim earum?</p></li>
-                            <p>- Lord Esteban...</p> <p>25 respuestas</p>
-                        <li>
-                            <a href="#" >Me hace acordar a...</a> 
-                            <p class="discucion_reducida">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nemo a? Vitae est, quasi quo ex mollitia ipsa culpa? Provident voluptates esse corporis repellat veritatis eius aperiam, recusandae enim earum?</p></li>
-                            <p>- El pipe</p> <p>18 respuestas</p>
-                        <li>
-                            <a href="#" >No debo se el unico...</a> 
-                            <p class="discucion_reducida">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nemo a? Vitae est, quasi quo ex mollitia ipsa culpa? Provident voluptates esse corporis repellat veritatis eius aperiam, recusandae enim earum?</p></li>
-                            <p>- Saint Alejandro</p> <p>15 respuestas</p>
-                        <li>
-                            <a href="#" >¡Al fin lo que buscaba!</a> 
-                            <p class="discucion_reducida">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, nemo a? Vitae est, quasi quo ex mollitia ipsa culpa? Provident voluptates esse corporis repellat veritatis eius aperiam, recusandae enim earum?</p>
-                            <p>- Santoro Leo</p> <p>9 respuestas</p>
+                        <li class="nuevas_discuciones_home">
+                            <a class="titulo_discucion_home"  href="#">¿Cartón o mejor papel?</a>
+                            <a href="#" class="referencia_a_contenido"> | " Submarino de papel " |</a>
+                            <p class="discucion_reducida"> Este juego me parece que utiliza muy bien el recurso del carton corrugado para hacer el efecto del agua. Pero al agrandar el mapa se puede volver costoso. </p>
+                            <p class="autor_home">- Lego-Lass</p>
+                            <p class="nro_respuestas_home">200 respuestas...</p>
+                        </li>
+                        <li class="nuevas_discuciones_home">
+                            <a class="titulo_discucion_home" href="#" >Bueno pero lento, es...</a> 
+                            <a href="#" class="referencia_a_contenido"> | " Ajedrez 2 " |</a>
+                            <p class="discucion_reducida"> </p>
+                            <p class="autor_home">- Lord-Esteban</p>
+                            <p class="nro_respuestas_home">25 respuestas...</p>
+                        </li>
+                        <li class="nuevas_discuciones_home">
+                            <a class="titulo_discucion_home" href="#" >Me hace acordar a...</a> 
+                            <a href="#" class="referencia_a_contenido"> | " Manchon Attack " |</a>
+                            <p class="discucion_reducida"> </p>
+                            <p class="autor_home">- El-pipe-112</p> 
+                            <p class="nro_respuestas_home">18 respuestas...</p>
+                        </li>
+                        <li class="nuevas_discuciones_home">
+                            <a class="titulo_discucion_home" href="#" >No debo se el unico...</a> 
+                            <a href="#" class="referencia_a_contenido"> | " Dedos y Dedales " |</a>
+                            <p class="discucion_reducida"> </p>
+                            <p class="autor_home">- Saint-Alejandro</p> 
+                            <p class="nro_respuestas_home">15 respuestas...</p>
+                        </li>
+                        <li class="nuevas_discuciones_home">
+                            <a class="titulo_discucion_home" href="#" >¡Al fin lo que buscaba!</a> 
+                            <a href="#" class="referencia_a_contenido"> | " Escalatina 2.0 " |</a>
+                            <p class="discucion_reducida"> </p>
+                            <p class="autor_home">- Santoro-Leo</p> 
+                            <p class="nro_respuestas_home">9 respuestas...</p>
                         </li>
                     </ul>
-                    <a href="./paginas/catalogo.html" class="boton_para_expandir"> Ver Más...</a>
+                    <a href="./paginas/comunidad.html" class="boton_para_expandir"> Ver Más...</a>
 
                 </article>        
             </section>
         </div>
         <section class="pre_footer">
-            <div>
-                <p>zzzzz</p>
+            <div class="prefooter-grid">
+
+                <div>
+                    <img class="img1" src="img/archive-7548483_960_720.jpg" alt="">
+                </div>
+
+                <p class="texto1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
+                <p class="texto2">
+                    Segundo texto de ejemplo del prefooter.
+                </p>
+
+                <div >
+                    <img class="img2" src="img/library-repository-archive-feature.png" alt="">
+                </div>
+
             </div>
         </section>
+
+        <div class="espacio_firmas">   
+            <img src="img/firma_pagina.png" alt="" class="firma_gaby">
+            <img src="img/el_gabi.png" alt="" class="detalle_gaby">
+        </div>
 
     </main>
     <footer><!--fin de pagina que contiene toda la letra chica-->

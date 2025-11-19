@@ -24,7 +24,7 @@ a:active {
     color: red;
 }
 a:hover {
-    color: aliceblue;
+    color: rgb(255, 251, 240);
 }
 
 ul {
@@ -38,10 +38,15 @@ body{
     width: 100%;
 }
 
+
+.titulo_section{
+    margin: 2vh 2% 1vh 2%;
+}
+
 .linea_divisoria{
 height: 1px;
 border: 3px solid rgb(105, 130, 105);
-margin: 1% 2% 1% 2%;
+    margin: 2vh 2% 2vh 2%;
 }
 
 /*^^ Cierro CSS Global ^^*/
@@ -158,6 +163,8 @@ header input{
 
 main{
     background-color: rgb(185, 155, 107);
+    height: max-content;
+    padding-bottom: 1px;
 }
 
 .base_pagina{
@@ -169,37 +176,32 @@ main{
     padding: 0px 20px 0px 1%;
 }
 
+.primer_bloque{
+    height: 23rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
 .base_columna_izquierda{
     box-sizing: content-box;
     display: block;
-    margin:15px 6px 15px 5px;
-    width: 70%;
-    min-height: 100vh;  
+    flex-grow: 1;
+    flex: 2.5 1 0;
+
 }
 
 .base_columna_derecha{ 
     box-sizing: content-box;
     display: block;
     float: none;
-    line-height: 14px;
     position: static;
     z-index: auto;
     border: none;
-    min-height: 100%;
-    width: 25%;
-    border: 2px solid gray;
-    margin:15px 6px 15px 3px;
-
+    flex-grow: 1;
+    flex: 1.2 1 0;
 }
 
-.pre_footer{
-    min-height: 150px;
-    height: 200px;
-    margin:15px 2.5% 10px 2.5%;
-    padding: 0px 2% 0px 2%;
-    border: 2px solid saddlebrown;
-
-}
 
 
 /* [[FIN cajas del Main]] ============
@@ -211,47 +213,67 @@ main{
 
 /* [[Columna izquierda]] ===================
  */
-
-.base_columna_izquierda .Carrousel{
-    background-image: url(https://marketplace.canva.com/EAFGxaHN790/1/0/1600w/canva-black-white-minimalist-professional-motivational-quote-twitter-headers-4V4BSQ99QOg.jpg);
-    background-size: 100px;
+ .carrusel {
+    width: 100%;
+    height: 22rem;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin: 1% 0.5%;
 }
 
-.primer_bloque{
-    height: 15rem;
-}
 
-.titulo_section{
-    margin: 1.5% 2% 1.5% 2%;
-}
-
-.base_columna_izquierda .nuevas_publicaciones{
+.nuevas_publicaciones{
     display: block;
     align-content: center;
     margin: 5px 5px 5px 5px ;
 }
 
-.contenidos_vista_inicio{
+.contenidos_vista_home{
 align-self: auto;
 }
 
-.base_columna_izquierda .nuevas_publicaciones 
-.contenidos_vista_inicio img{
-    display: inline;
-}
 
 .IMGCONT{
     height: 120px;
-    width: 60px;
+    width: 80px;
+    margin: 0 5px 0 0;
 }
 
-.cajas_vista_inicio{
+.titulo_contenido_home{
+    margin: 0 1%;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: medium;
+}
+
+.click_descarga{
+    display: flexbox;
+    align-content: center;
+    align-self: center;
+    height: 55px;
+    margin: 20px 0;
+}
+
+.icono_descarga{
+height: 50px;
+margin: 0 0 5px 0;
+}
+
+.cajas_vista_home{
     display: flex;
         background-color: rgb(241, 219, 191);
     margin: 0 0 1% 0;
         padding: 2%;
     border: 2px solid gray;
+    flex-direction: row;
+}
 
+.descripcion_reducida{
+        padding: 0 1% 0 1%;
+        margin: 10px 0 5px 0;
 
 }
 
@@ -263,6 +285,8 @@ align-self: auto;
     width: 12%;
     padding: 1%;
     justify-self: end;
+    min-width: 100px;
+    min-height: 30px;
     
 }
 
@@ -272,39 +296,31 @@ align-self: auto;
 /* [[Columna Derecha]] ===========================================
  */
 
-.base_columna_derecha .drop_archivo{ 
+.drop_archivo{ 
     text-align: center;
-    padding: 10%;
-    border: 2px solid gray;
-    height: 200px;
-    background-color: rgb(241, 219, 191);
-
+    width: 100%;
+    justify-items: center;
+    overflow: hidden;
+    margin: 35px 0;
 }
 
-.base_columna_derecha .drop_archivo button{
-    margin: 10px 0px;
-}
-
-.base_columna_derecha .drop_archivo:hover{
-    background-color: rgb(252, 181, 59);
-    text-align: center;
-    padding: 10%;
-    border: 2px solid gray;
-}
-
-.base_columna_derecha article ul li a{
+.titulo_discucion_home{
     font-family: "Prompt", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: medium;
 }
 
-.base_columna_derecha article ul li p{
-    margin: 10px 0 5px 0;
-}
-
-.base_columna_derecha article h4{
-    margin: 0 0 10px 0;
+.nuevas_discuciones_home{
+    display: flex;
+        background-color: rgb(241, 219, 191);
+    margin: 0 0 1% 0;
+        padding: 2%;
+    border: 2px solid gray;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
 }
 
 .base_columna_derecha .info_columna_der{
@@ -312,12 +328,29 @@ align-self: auto;
     margin: 15px;
 }
 
-.info_columna_der a{
-    font-palette: rgb(186, 45, 11);
+.autor_home, .nro_respuestas_home {
+    font-size: 0.8rem;
+    margin-left: 10px;
+    display: inline;
+    justify-content: center;
+}
+
+.referencia_a_contenido{
+    font-size: 0.8rem;
+    margin-left: 10px;
+    display: inline;
+    justify-content: center;
+    color: rgb(138, 99, 0);
+}
+
+.autor_home{
+    color:  rgb(51, 68, 51);
+    font-weight: 900;
 }
 
 .discucion_reducida{
     padding: 0 1% 0 1%;
+        margin: 10px 0 5px 0;
 }
 
 
@@ -327,11 +360,51 @@ align-self: auto;
 /* [[Footer]] ===========================================
  */
  
+ .espacio_firmas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+ }
+
+.detalle_gaby{
+    margin: 2% 1%;
+    width: 150px;
+}
+.firma_gaby{
+    margin: 40px 1%
+}
+
 footer{
     background-color: rgb(105, 130, 105);
     font-family: Arial, Helvetica, sans-serif; font-size: small;
     padding: 1.5%;
 }
+
+.pre_footer{
+    min-height: 150px;
+    height: 100%;
+    margin:15px 2.5% 10px 2.5%;
+    padding: 0px 2% 0px 2%;
+    border: 8px solid rgb(124, 82, 23);
+    position: relative;
+    z-index: 1;
+}
+
+.pre_footer::after {
+    content: "";
+    position: absolute;
+    inset: 0;  /* equivale a top:0; left:0; width:100%; height:100%; */
+    background-image: url(../img/fondo-corcho.jpg) ;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
 
 
 
@@ -350,4 +423,156 @@ footer{
 
 .lista_contenido_catalogo{
     margin: 0 2% 0 2vw;
+}
+
+
+
+
+
+
+
+
+
+/* ------------hecho con ayuda---------------------------------
+---------------------------------------------------------------
+--------------------------------------------------------------- */
+
+.drop_archivo input[type="file"] {
+    display: none; /* Oculta el input real */
+}
+
+.drop_label {
+    display: block;
+    width: 100%;
+    height: 230px;
+    cursor: pointer;
+
+    /* Imagen cuando NO hay hover */
+    background-image: url("../img/Asset 12.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Imagen cuando HAY hover */
+.drop_label:hover {
+    background-image: url("../img/Asset 13.png");
+}
+
+
+/* Ocultamos los radio buttons del carrousel */
+.carrusel input[type="radio"] {
+    display: none;
+}
+
+/* Contiene los 3 slides */
+.slides {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+/* Cada slide ocupa 100% del carrusel */
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+
+/* Simulan las imágenes */
+.imagen {
+    width: 100%;
+    height: 82%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-size: auto;
+    background-position: center;
+        border: 2px solid rgb(105, 130, 105);
+
+}
+
+/* Texto descriptivo */
+.descripcion {
+    font-size: 1.2rem;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/* Botones del carrusel */
+.controles {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.controles label {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+}
+
+/* Movimiento del carrusel (MAGIA CON CSS) */
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+
+#slide1:checked ~ .controles label[for="slide1"],
+#slide2:checked ~ .controles label[for="slide2"],
+#slide3:checked ~ .controles label[for="slide3"] {
+    background: rgb(105, 130, 105);
+    border-color: black;
+}
+
+
+
+
+.prefooter-grid {
+    display: grid;
+    /* Dos columnas iguales */
+    grid-template-columns: 1fr 1fr;
+    /* Dos filas automáticas */
+    grid-template-rows: auto auto;
+    /* Áreas nombradas */
+    grid-template-areas:
+        "img1 texto1"
+        "texto2 img2";
+
+    gap: 20px; /* separación entre elementos, opcional */
+    padding: 20px; /* para que respire */
+
+    grid-area: img1 texto1 texto2 img2;
+
+}
+/* Cada área asignada */
+.prefooter-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;   /* ← respeta proporciones SIN recortar */
+    object-position: center;
+    display: block;
+}
+
+.img1, .img2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px dashed rgba(255, 255, 255, 0.438);
+}
+
+.texto1, .texto2{
+    padding: 3%;
+    align-self: center;
+    justify-self: center;
 }
