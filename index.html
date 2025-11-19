@@ -17,17 +17,18 @@
             <a href="/index.html"><img src="/img/el_gabi.png" alt="logo vectorizado" class="logo"></a>
             <form action="X" id="barra_busqueda">
                 
-                <input class="caja_de_busqueda" type="text" id="caja_de_busqueda" placeholder="Buscacacar">
+                <input class="caja_de_busqueda" type="text" id="caja_de_busqueda" placeholder="Barra de busqueda" >
 
             </form>
 
-            <form action="X" id="accesos">
-                
-                <label for="usuario"> Usuario</label>
-                <input type="text" id="usuario" placeholder="Usuario">
+            <form action="/login" method="POST" id="accesos">
+                <label for="usuario"></label>
+                <input type="email" id="usuario" name="usuario" placeholder="Usuario" required>
 
-                <label for="contraseña"> Contraseña</label>
-                <input type= "password" id="contraseña" placeholder="contraseña">
+                <label for="contraseña"></label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+
+                <button type="submit" class="boton_login">Iniciar sesión</button>
             </form>
         </div>
         <nav class=barra_nav_pag>
@@ -41,46 +42,61 @@
         <div class="base_pagina">
             <section class="base_columna_izquierda">
                 <div class="primer_bloque">
-                    <div class="carrusel">
 
-                        <!-- Botones ocultos para hacer funcionar el carrousel -->
+                    <div class="carrusel">
                         <input type="radio" name="slides" id="slide1" checked>
                         <input type="radio" name="slides" id="slide2">
                         <input type="radio" name="slides" id="slide3">
-
-                        <!-- Contenedor general de las slides -->
+                        
+                        
                         <div class="slides">
 
-                            <div class="slide" id="s1">
-                                <a href="./paginas/error.html">
-                                    <div class="imagen" style="background-image:url(img/banner-4.jpg)"></div>
+                            <div class="slide">
+                                <a href="./paginas/error.html" class="slide_link">
+
+                                    <div class="imagen" style="background-image:url(https://cdn.pixabay.com/photo/2017/07/31/21/52/black-and-white-2561435_960_720.jpg)"></div>
+
+                                    <div class="overlay_texto">
+                                        <h3>¡Soporte para Figurines!</h3>
+                                        <p>Ahora al crear las publicaciones se podran incorporar figurines y fichas de juegos conocidos.</p>
+                                    </div>
+
                                 </a>
-                                <p class="descripcion">Esta es la imagen 1</p>
                             </div>
 
-                            <div class="slide" id="s2">
-                                <a href="#">
-                                    <div class="imagen" style="background-image:url(img/banner-2.jpg)"></div>
+                            <div class="slide">
+                                <a href="#" class="slide_link">
+
+                                    <div class="imagen" style="background-image:url(https://cdn.pixabay.com/photo/2016/01/20/11/54/book-wall-1151405_960_720.jpg)"></div>
+
+                                    <div class="overlay_texto">
+                                        <h3>Concurso de historias en Redes</h3>
+                                        <p>Visiten nuestras redes sociales para enterarse de como participar.</p>
+                                    </div>
+
                                 </a>
-                                <p class="descripcion">Esta es la imagen 2</p>
                             </div>
 
-                            <div class="slide" id="s3">
-                                <a href="#">
-                                    <div class="imagen" style="background-image:url(img/banner-3.jpg)"></div>
-                                </a>
-                                <p class="descripcion">Esta es la imagen 3</p>
-                            </div>
+                            <div class="slide">
+                                <a href="#" class="slide_link">
 
+                                    <div class="imagen" style="background-image:url(https://cdn.pixabay.com/photo/2018/03/08/01/14/desktop-3207592_960_720.jpg)"></div>
+
+                                    <div class="overlay_texto">
+                                        <h3>Votación al "Juego mas Ingenioso" 2025</h3>
+                                        <p>Desde el 10/11 hasta el 12/12 </p>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
 
-                        <!-- Botones visibles para cambiar entre slides -->
                         <div class="controles">
                             <label for="slide1"></label>
                             <label for="slide2"></label>
                             <label for="slide3"></label>
                         </div>
                     </div>
+                    
                 </div>
 
                 <div class="separador_columna_izq">
@@ -94,51 +110,61 @@
                         <li class="cajas_vista_home">
                             <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT1" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
-                                <a class="titulo_contenido_home" href="paginas/publicacion.html">Contenido nuevo 1</a>
+                                <a class="titulo_contenido_home" href="paginas/publicacion.html">| Dedos y Dedales |</a>
                                 <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="autor_p_home">- Ferni-10</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
                                 <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                                <p class="nro_descargas">9052</p>
                             </a>
                         </li>
                         <li class="cajas_vista_home">
                             <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT2" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
-                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 2</a>
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">| Tablero Mortal |</a>
                                 <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="autor_p_home">- Laureano</p> 
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
                                 <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                                <p class="nro_descargas">12 mil</p> 
                             </a>
                         </li>
                         <li class="cajas_vista_home">
                             <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT3" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
-                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 3</a>
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">| Dados por doquier |</a>
                                 <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="autor_p_home">- Hola-Lola</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
                                 <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                                <p class="nro_descargas">1164</p>
                             </a>
                         </li>
                         <li class="cajas_vista_home">
                             <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT4" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
-                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 4</a>
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">| Alpha minado |</a>
                                 <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="autor_p_home">- Paty-Carne-Doble</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
                                 <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                                <p class="nro_descargas">238</p>
                             </a>
                         </li>
                         <li class="cajas_vista_home">
                             <img src='img/Asset 10.png' class="IMGCONT" alt="IMGCONT5" onmouseover="this.src='img/Asset 11.png';" onmouseout="this.src='img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
-                                <a class="titulo_contenido_home" href="./paginas/publicación.html">Contenido nuevo 5</a>
-                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <a class="titulo_contenido_home" href="./paginas/publicación.html">| ¡Fuera del Plato! |</a>
+                                <p class="descripcion_reducida"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas         ddddddddddddddddddddddd sssssssssssssssssssssss</p>
+                                <p class="autor_p_home">- Jake-el-perro</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
                                 <img src="img/Asset 14.png" class="icono_descarga" alt="icono_descarga">
+                                <p class="nro_descargas">129 mil</p>
                             </a>
                         </li>
                     </ul>
@@ -165,38 +191,38 @@
                 <article class="info_columna_der"><!--Este debe estas segunfo en la columna-->
                     <ul><!--Mostrar los 5 mas nuevos-->
                         <li class="nuevas_discuciones_home">
-                            <a class="titulo_discucion_home"  href="#">¿Cartón o mejor papel?</a>
-                            <a href="#" class="referencia_a_contenido"> | " Submarino de papel " |</a>
-                            <p class="discucion_reducida"> Este juego me parece que utiliza muy bien el recurso del carton corrugado para hacer el efecto del agua. Pero al agrandar el mapa se puede volver costoso. </p>
-                            <p class="autor_home">- Lego-Lass</p>
+                            <a class="titulo_discucion_home"  href="#">¿Cartón o mejor papél?</a>
+                            <a href="#" class="referencia_a_contenido"> |  Submarino de papel  |</a>
+                            <p class="discucion_reducida"> "Este juego me parece que utiliza muy bien el recurso del carton corrugado para hacer el efecto del agua. Pero al agrandar el mapa se puede volver costoso si no se usa papél con reemplazo." </p>
+                            <p class="discutor_home">- Lego-Lass</p>
                             <p class="nro_respuestas_home">200 respuestas...</p>
                         </li>
                         <li class="nuevas_discuciones_home">
-                            <a class="titulo_discucion_home" href="#" >Bueno pero lento, es...</a> 
-                            <a href="#" class="referencia_a_contenido"> | " Ajedrez 2 " |</a>
+                            <a class="titulo_discucion_home" href="#" >Bueno pero lento</a> 
+                            <a href="#" class="referencia_a_contenido"> |  Ajedrez 2  |</a>
                             <p class="discucion_reducida"> </p>
-                            <p class="autor_home">- Lord-Esteban</p>
+                            <p class="discutor_home">- Lord-Esteban</p>
                             <p class="nro_respuestas_home">25 respuestas...</p>
                         </li>
                         <li class="nuevas_discuciones_home">
                             <a class="titulo_discucion_home" href="#" >Me hace acordar a...</a> 
-                            <a href="#" class="referencia_a_contenido"> | " Manchon Attack " |</a>
+                            <a href="#" class="referencia_a_contenido"> |  Manchon Attack  |</a>
                             <p class="discucion_reducida"> </p>
-                            <p class="autor_home">- El-pipe-112</p> 
+                            <p class="discutor_home">- El-pipe-112</p> 
                             <p class="nro_respuestas_home">18 respuestas...</p>
                         </li>
                         <li class="nuevas_discuciones_home">
                             <a class="titulo_discucion_home" href="#" >No debo se el unico...</a> 
-                            <a href="#" class="referencia_a_contenido"> | " Dedos y Dedales " |</a>
+                            <a href="#" class="referencia_a_contenido"> |  Dedos y Dedales  |</a>
                             <p class="discucion_reducida"> </p>
-                            <p class="autor_home">- Saint-Alejandro</p> 
+                            <p class="discutor_home">- Saint-Alejandra</p> 
                             <p class="nro_respuestas_home">15 respuestas...</p>
                         </li>
                         <li class="nuevas_discuciones_home">
                             <a class="titulo_discucion_home" href="#" >¡Al fin lo que buscaba!</a> 
-                            <a href="#" class="referencia_a_contenido"> | " Escalatina 2.0 " |</a>
+                            <a href="#" class="referencia_a_contenido"> |  Escalatina 2.0  |</a>
                             <p class="discucion_reducida"> </p>
-                            <p class="autor_home">- Santoro-Leo</p> 
+                            <p class="discutor_home">- Santoro-Leo</p> 
                             <p class="nro_respuestas_home">9 respuestas...</p>
                         </li>
                     </ul>
@@ -208,22 +234,22 @@
         <section class="pre_footer">
             <div class="prefooter-grid">
 
-                <div>
-                    <img class="img1" src="img/archive-7548483_960_720.jpg" alt="">
+                <div class="img1" >
+                    <img src="img/archive-7548483_960_720.jpg" alt="">
                 </div>
 
-                <p class="texto1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-
-                <p class="texto2">
-                    Segundo texto de ejemplo del prefooter.
-                </p>
-
-                <div >
-                    <img class="img2" src="img/library-repository-archive-feature.png" alt="">
+                <div class="texto1">
+                    <h1 class="titulo_us_home">Sobre Nosotros</h1>
+                    <p class="texto_us_home">Somos una comunidad dedicada a celebrar la creatividad lúdica. En nuestra página recopilamos juegos de mesa originales creados por personas de todo el mundo, brindando un espacio para compartir ideas, experimentar nuevas mecánicas y descubrir propuestas únicas. Nuestro objetivo es fomentar la imaginación y ofrecer un lugar accesible donde cualquiera pueda mostrar su obra.</p>
                 </div>
 
+                <div class="texto2">
+                    <p class="texto_us_home">Creemos que cada juego cuenta una historia distinta y merece ser visto. Por eso mantenemos un repositorio abierto, curado y en constante crecimiento, donde valoramos la diversidad, la innovación y la colaboración. Invitamos a todos los entusiastas, desde aficionados hasta diseñadores experimentados, a contribuir con sus creaciones. Además, trabajamos continuamente para mejorar la plataforma, promover eventos comunitarios y facilitar recursos que ayuden a transformar simples conceptos en experiencias de juego significativas y accesibles para todos. Impulsamos la imaginación colectiva y celebramos cada aporte enviado!</p>
+                </div>
+
+                <div class="img2" >
+                    <img src="img/library-repository-archive-feature.png" alt="">
+                </div>
             </div>
         </section>
 

@@ -1,8 +1,8 @@
 *{
     margin: 0;
     box-sizing: border-box;
-/*     font-family: "Prompt", sans-serif;
- */}
+    line-height: 1.3;
+}
 
 /*VV Debajo de esto esta el CSS Global VV*/
 
@@ -14,11 +14,8 @@ h1{
 
 
 a {
-    color: black;
     text-decoration: none;
-}
-a:visited {
-    color: black;
+    color: inherit;
 }
 a:active {
     color: red;
@@ -41,6 +38,7 @@ body{
 
 .titulo_section{
     margin: 2vh 2% 1vh 2%;
+    font-weight: 550;
 }
 
 .linea_divisoria{
@@ -57,7 +55,8 @@ border: 3px solid rgb(105, 130, 105);
 
 header{
     background-color:rgb(105, 130, 105);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif; font-size: small;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
 }
@@ -66,7 +65,7 @@ header{
     flex-direction: row;
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 nav{
@@ -80,7 +79,8 @@ nav{
 }
 
 .barra_nav_pag{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
     align-items: center;
     justify-content: center;
 
@@ -126,6 +126,7 @@ header input{
 .caja_de_busqueda{
     width: 100%;
     height: 40px;
+    padding: 0 0 0 10px;
 }
 
 #barra_busqueda{
@@ -133,6 +134,7 @@ header input{
     justify-content: space-between;
     align-items: center;
     width: 60%;
+    max-width: 753px;
 }
 
 #accesos{
@@ -141,17 +143,46 @@ header input{
     flex-wrap: wrap;
 }
 
-/* header #accesos a{
-    background: none;
-    border: 1px solid black;
-    padding: 0.5%;
-    margin: 5px;
-    display: inline-block;
-    vertical-align: middle;
+#accesos label {
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 3px;
 }
- */
+
+#accesos button {
+    margin-top: 5px;
+    padding: 2.5px 10px;
+    background: rgb(185, 155, 107);
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
 
+#accesos button:hover {
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 900px) {
+    .head_info {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .head_info .logo,
+    #barra_busqueda{
+        flex: 1 1 100%;
+        max-width: none;
+        display: flex;
+        margin: 10px 0;
+    }
+
+    #accesos {
+        display: none;
+    }
+}
 
 
 /* [[FIN HEADER]] ===========================================
@@ -242,7 +273,7 @@ align-self: auto;
 }
 
 .titulo_contenido_home{
-    margin: 0 1%;
+    padding: 0 1%;
     font-family: "Prompt", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -250,16 +281,20 @@ align-self: auto;
 }
 
 .click_descarga{
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     align-content: center;
     align-self: center;
     height: 55px;
     margin: 20px 0;
+    
 }
 
 .icono_descarga{
-height: 50px;
-margin: 0 0 5px 0;
+height: 30px;
+width: 22px;
+margin: 0 0 0px 0;
 }
 
 .cajas_vista_home{
@@ -267,27 +302,51 @@ margin: 0 0 5px 0;
         background-color: rgb(241, 219, 191);
     margin: 0 0 1% 0;
         padding: 2%;
-    border: 2px solid gray;
+    border: 2px solid rgba(0, 0, 0, 0.366);
     flex-direction: row;
 }
 
-.descripcion_reducida{
-        padding: 0 1% 0 1%;
-        margin: 10px 0 5px 0;
+.contenido_cajas_vista_home{
+    padding: 0 2% 0 1%;
+    width: 100%;
+}
 
+.descripcion_reducida{
+        padding: 0 0% 0 1%;
+        margin: 10px 0 5px 0;
+        text-align: justify;
+
+}
+
+.autor_p_home{
+    padding: 0 1%;
+    color:  rgb(51, 68, 51);
+    font-weight: 900;
+}
+
+.nro_descargas{
+    display: flex;
+    padding: 0;
+    min-width: 50px;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif; font-size: small;
+    font-variant: small-caps;
+    line-height: 2;
 }
 
 .boton_para_expandir{
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     background-color: brown;
-    width: 12%;
     padding: 1%;
     justify-self: end;
-    min-width: 100px;
-    min-height: 30px;
-    
+    min-width: 8vw;
+    min-height: 6vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(251, 176, 64);
+    border: 2px solid rgba(0, 0, 0, 0.166);
+
 }
 
 /* [[FIN Columna izquierda]] ===================
@@ -316,7 +375,7 @@ margin: 0 0 5px 0;
         background-color: rgb(241, 219, 191);
     margin: 0 0 1% 0;
         padding: 2%;
-    border: 2px solid gray;
+    border: 2px solid rgba(0, 0, 0, 0.366);
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
@@ -328,7 +387,7 @@ margin: 0 0 5px 0;
     margin: 15px;
 }
 
-.autor_home, .nro_respuestas_home {
+.discutor_home, .nro_respuestas_home {
     font-size: 0.8rem;
     margin-left: 10px;
     display: inline;
@@ -343,15 +402,18 @@ margin: 0 0 5px 0;
     color: rgb(138, 99, 0);
 }
 
-.autor_home{
+.discutor_home{
     color:  rgb(51, 68, 51);
     font-weight: 900;
 }
 
 .discucion_reducida{
-    padding: 0 1% 0 1%;
-        margin: 10px 0 5px 0;
+    padding: 0 2% 0 2%;
+    margin: 10px 0 5px 0;
+    text-align: center;
 }
+/* [[FIN Columna derecha]] ===================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 
 
@@ -385,7 +447,7 @@ footer{
 .pre_footer{
     min-height: 150px;
     height: 100%;
-    margin:15px 2.5% 10px 2.5%;
+    margin:15px 2% 10px 1.5%;
     padding: 0px 2% 0px 2%;
     border: 8px solid rgb(124, 82, 23);
     position: relative;
@@ -404,12 +466,121 @@ footer{
     z-index: -1;
 }
 
+.prefooter-grid img {
+    border-radius: 15px;
+    border: 2px dashed rgba(255, 255, 255, 0.438);
+}
+
+.img1, .img2 {
+    width: 100%;
+    height: 100%;
+}
+
+.texto1, .texto2{
+    width: 100%;
+    min-height: 80%;
+    padding: 3%;
+    align-self: center;
+    justify-self: center;
+    display: flexbox;
+    flex-direction: column;
+    background-color: rgba(255, 239, 168, 0.37);
+    border-radius: 10px;
+    }
+
+.titulo_us_home{
+    font-style: italic;
+    font-size: xxx-large;
+    
+}
+
+.texto_us_home{
+    font-size: large;
+    font-weight: 500;
+}
+
+
+/* [[FIN Footer]] ===================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+
+
+/* [[Css de las distintas paginas]] ====================================
+======================================================================
+======================================================================*/
+
+.contacto_section {
+    margin: 3% 10%;
+    background-color: rgba(255, 239, 168, 0.25);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.contacto_section h1 {
+    font-family: "Prompt", sans-serif;
+    margin-bottom: 5px;
+}
+.contacto_section p{
+    margin: 0 0 20px 0;
+}
+.form_contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.form_contacto label {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form_contacto input,
+.form_contacto textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #877657;
+    background-color: #f8e9c9;
+    font-size: 1rem;
+}
+.btn_contacto {
+    background-color: brown;
+    color: rgb(251, 176, 64);
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn_contacto:hover {
+    background-color: rgb(110, 28, 28);
+}
+.estado_envio {
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
 
 
-/* [[Contenido de las distintas paginas]] ======================
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .pagina_login{
     margin: 5% 30% 35% 30%;
     width: 100%;
@@ -429,88 +600,69 @@ footer{
 
 
 
+/* [[FIN Css de las distintas paginas]] ===========================
+======================================================================
+======================================================================*/======
 
 
 
 
-/* ------------hecho con ayuda---------------------------------
+
+
+
+
+
+/* ------------hecho con ayuda de ai---------------------------------
 ---------------------------------------------------------------
 --------------------------------------------------------------- */
 
 .drop_archivo input[type="file"] {
     display: none; /* Oculta el input real */
 }
-
 .drop_label {
     display: block;
     width: 100%;
     height: 230px;
     cursor: pointer;
-
     /* Imagen cuando NO hay hover */
     background-image: url("../img/Asset 12.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-
-/* Imagen cuando HAY hover */
-.drop_label:hover {
+.drop_label:hover { /* Imagen cuando HAY hover */
     background-image: url("../img/Asset 13.png");
 }
-
-
-/* Ocultamos los radio buttons del carrousel */
-.carrusel input[type="radio"] {
+.carrusel input[type="radio"] { /* Ocultamos los radio buttons del carrousel */
     display: none;
 }
-
-/* Contiene los 3 slides */
-.slides {
+.slides { /* Contiene los 3 slides */
     width: 100%;
     height: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
     
 }
-
-/* Cada slide ocupa 100% del carrusel */
-.slide {
+.slide { /* Cada slide ocupa 100% del carrusel */
     width: 100%;
     height: 100%;
     flex-shrink: 0;
     text-align: center;
     padding-top: 10px;
-    
-}
+    }
+/* Ajuste de las imágenes del carrusel */
 
-/* Simulan las imágenes */
-.imagen {
-    width: 100%;
-    height: 82%;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-size: auto;
-    background-position: center;
-        border: 2px solid rgb(105, 130, 105);
-
-}
-
-/* Texto descriptivo */
-.descripcion {
+.descripcion { /* Texto descriptivo de las imagenes*/
     font-size: 1.2rem;
     margin: 10px;
     font-weight: bold;
 }
-
-/* Botones del carrusel */
-.controles {
+.controles {/* Botones del carrusel */
     position: absolute;
     bottom: 10px;
     display: flex;
     gap: 10px;
 }
-
 .controles label {
     width: 15px;
     height: 15px;
@@ -522,8 +674,7 @@ footer{
     place-items: center;
     font-size: 0.8rem;
 }
-
-/* Movimiento del carrusel (MAGIA CON CSS) */
+/* Movimiento del carrusel (MAGIA del CSS jajaj) */
 #slide1:checked ~ .slides { transform: translateX(0%); }
 #slide2:checked ~ .slides { transform: translateX(-100%); }
 #slide3:checked ~ .slides { transform: translateX(-200%); }
@@ -535,28 +686,83 @@ footer{
     border-color: black;
 }
 
+/* Cada slide ocupa 100% del carrusel */
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;   /* ← NECESARIO */
+}
+
+/* El enlace contiene imagen + overlay */
+.slide_link {
+    position: relative;   /* ← FUNDAMENTAL */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagen del slide */
+.imagen {
+    width: 100%;
+    height: 100%;    
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgb(105, 130, 105);
+}
+
+/* Overlay */
+.overlay_texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 0 0 30px 0;
+    padding: 10px;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    border-radius: 0 0 10px 10px; /* sigue la curva de la imagen */
+}
+
+.overlay_texto h3, .overlay_texto p {
+    margin: 5px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+
+
+
+
+
+
+
 
 
 
 .prefooter-grid {
-    display: grid;
-    /* Dos columnas iguales */
-    grid-template-columns: 1fr 1fr;
-    /* Dos filas automáticas */
-    grid-template-rows: auto auto;
-    /* Áreas nombradas */
+    display: grid;    /* Dos columnas iguales */
+    grid-template-columns: 1fr 1fr;    /* Dos filas automáticas */
+    grid-template-rows: auto auto;  
     grid-template-areas:
-        "img1 texto1"
-        "texto2 img2";
-
+        "a b"
+        "c d";
     gap: 20px; /* separación entre elementos, opcional */
-    padding: 20px; /* para que respire */
+    padding: 20px; /* para que respire */    
 
-    grid-area: img1 texto1 texto2 img2;
+    .img1   { grid-area: b; }
+    .texto1 { grid-area: a; }
+    .texto2 { grid-area: d; }
+    .img2   { grid-area: c; }
 
 }
-/* Cada área asignada */
-.prefooter-grid img {
+.prefooter-grid img { /* Cada área asignada */
     width: 100%;
     height: 100%;
     object-fit: fill;   /* ← respeta proporciones SIN recortar */
@@ -564,15 +770,13 @@ footer{
     display: block;
 }
 
-.img1, .img2 {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    border: 2px dashed rgba(255, 255, 255, 0.438);
-}
 
-.texto1, .texto2{
-    padding: 3%;
-    align-self: center;
-    justify-self: center;
-}
+
+
+
+
+
+
+
+
+
