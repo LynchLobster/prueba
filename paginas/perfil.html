@@ -40,31 +40,26 @@
     </header>
     <main>
         <div class="base_pagina">
-            <div class="pagina_login">	
-                <div>
-                    <span>Login a "Pagina de Hobbie Cool"</span>
-                </div>
-                <div>
-                    <label for="cajadeuser">
-                        Usuario o Mail
-                        <em>*</em>
-                    </label>
-                    <input itemid="cajadeuser" type="text" name="" placeholder="Usuario o Mail">
-                </div>
-                <div>
-                    <label for="cajadecontraseña">
-                        Contraseña
-                        <em>*</em>
-                    </label>
-                    <input itemid="cajadecontraseña" type="text" name="" placeholder="Contraseña">
-                </div>
-                <div>
-                    <div id="miembrosform" class="caja_help">
-                        <p>¿No tienes una cuenta? <a href="/registrarse">Únete Ahora</a> <p>
-                        <p>¿Olvidaste tu contraseña o User? <a href="/reseteardatodecuenta" target="_blank">Resetealos</a></p>								
-                    </div>
-                </div>
-            </div>
+<section class="pagina_login">
+    <h2>Iniciar sesión</h2>
+
+    <form class="form_perfil" action="#" method="post">
+
+        <label for="usuario_login">Usuario</label>
+        <input type="text" id="usuario_login" name="usuario_login" placeholder="Ingresa tu usuario">
+
+        <label for="email_login">Correo electrónico</label>
+        <input type="email" id="email_login" name="email_login" placeholder="Ingresa tu correo">
+
+        <label for="password_login">Contraseña</label>
+        <input type="password" id="password_login" name="password_login" placeholder="Ingresa tu contraseña">
+
+        <label for="mensaje_login">Mensaje (opcional)</label>
+        <textarea id="mensaje_login" name="mensaje_login" placeholder="Escribe un mensaje..." rows="4"></textarea>
+
+        <button type="submit" class="btn_enviar_perfil">Enviar</button>
+    </form>
+</section>
         </div>
     </main>
 

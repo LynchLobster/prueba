@@ -272,8 +272,14 @@ main{
 
 .contenidos_vista_home{
 align-self: auto;
+text-align: left;
 }
 
+.contenidos_vista_catalogo{
+align-self: auto;
+text-align: left;
+margin: 0 5% 2% 5%;
+}
 
 .IMGCONT{
     height: 120px;
@@ -315,6 +321,16 @@ margin: 0 0 0px 0;
     flex-direction: row;
 }
 
+.cajas_vista_catalogo{
+    display: flex;
+        background-color: rgb(241, 219, 191);
+    margin: 0 0 1% 0;
+        padding: 2%;
+    border: 2px solid rgba(0, 0, 0, 0.366);
+    flex-direction: row;
+}
+
+
 .contenido_cajas_vista_home{
     padding: 0 2% 0 1%;
     width: 100%;
@@ -323,7 +339,7 @@ margin: 0 0 0px 0;
 .descripcion_reducida{
         padding: 0 0% 0 1%;
         margin: 10px 0 5px 0;
-        text-align: justify;
+        text-align: left;
 
 }
 
@@ -356,8 +372,9 @@ margin: 0 0 0px 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(251, 176, 64);
     border: 2px solid rgba(0, 0, 0, 0.166);
-
 }
+
+
 
 /* [[FIN Columna izquierda]] ===================
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -701,7 +718,7 @@ footer{
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #877657;
-    background-color: #f8e9c9;
+    background-color: #ffffff;
     font-size: 1rem;
 }
 .btn_contacto {
@@ -764,7 +781,9 @@ footer{
 .comunidad_contenedor {
     width: 100%;
     background-color: rgb(185, 155, 107);
-    padding: 2% 5%;
+    align-self: auto;
+    text-align: left;
+    margin: 0 5% 2% 5%;
 }
 
 /* Título principal */
@@ -789,7 +808,7 @@ footer{
 }
 
 /* Cada “caja” */
-.comunidad_item {
+.comunidad_item { /* agus: la verdad haciendo la pagina me gusto la idea de que estos bloque sean mas chicos en vez de todo el ancho de pagina. Y que se vayan reacomodando de a varios en renglones, a lo busbujas de texto (pero sinlas graficas de eso ajaj) */
     background-color: rgb(241, 219, 191);
     border: 2px solid rgba(0, 0, 0, 0.366);
     padding: 20px;
@@ -797,7 +816,8 @@ footer{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+
 }
 
 /* Título de la discusión */
@@ -818,11 +838,10 @@ footer{
 
 /* Texto reducido */
 .comunidad_texto {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 0.9rem;
     margin-bottom: 10px;
-    padding-right: 10%;
-    padding-left: 2%;
-    text-align: justify;
+    text-align: center;
 }
 
 /* Autor */
@@ -844,7 +863,9 @@ footer{
    FILTROS - Página Comunidad - AI
 ================================================ */
 
+
 .comunidad_filtros {
+    display: block;
     background-color: rgb(241, 219, 191);
     border: 2px solid rgba(0, 0, 0, 0.3);
     padding: 20px;
@@ -888,7 +909,7 @@ footer{
 .filtro_grupo label {
     align-items: center;
     gap: 8px;
-    margin: 4px 0;
+    margin: 4px 10px;
     font-weight: 450;
 }
 
@@ -908,6 +929,78 @@ footer{
 .filtros_boton:hover {
     background-color: rgb(161, 108, 41);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pagina_login{
+    margin: 5% 30%;
+    padding: 3%;
+    background-color: rgb(105, 130, 105);
+    border: 2px solid black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form_perfil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pagina_login label{
+    font-weight: bold;
+    font-family: "Prompt", sans-serif;
+}
+
+.pagina_login input,
+.pagina_login textarea{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.btn_enviar_perfil{
+    margin-top: 10px;
+    padding: 12px;
+    background-color: brown;
+    color: rgb(251, 176, 64);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn_enviar_perfil:hover{
+    background-color: rgb(120, 30, 30);
+}
+
+
+
+
+
+
+
+
 
 
 /* [[FIN Css de las distintas paginas]] ===========================

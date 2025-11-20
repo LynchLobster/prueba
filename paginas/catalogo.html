@@ -40,14 +40,92 @@
     </header>
 
     <main>
+        <div class="comunidad_filtros"> <!--Estructura de filtros reformulada de la pagina Comunidad-->
+
+            <h3 class="filtros_titulo">Filtrar Catálogo</h3>
+
+            <form class="filtros_form">
+
+                <!-- Filtro por categoría -->
+                <div class="filtro_grupo">
+                    <h4 class="filtro_subtitulo">Categoría:</h4>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="materiales">
+                        Materiales
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="mecanicas">
+                        Mecánicas
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="arte">
+                        Arte y Diseño
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="reglas">
+                        Temática
+                    </label>
+                </div>
+
+                <!-- Filtro por popularidad -->
+                <div class="filtro_grupo">
+                    <h4 class="filtro_subtitulo">Popularidad:</h4>
+
+                    <label>
+                        <input type="checkbox" name="popularidad" value="mas100">
+                        Más de 100mil descargas
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="popularidad" value="mas20">
+                        Más de 50mil descargas
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="popularidad" value="nuevo">
+                        Nuevas (menos de 10mil descargas)
+                    </label>
+                </div>
+
+                <!-- Filtro por fecha -->
+                <div class="filtro_grupo">
+                    <h4 class="filtro_subtitulo">Fecha:</h4>
+
+                    <label>
+                        <input type="checkbox" name="fecha" value="hoy">
+                        Hoy
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="fecha" value="semana">
+                        Esta semana
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="fecha" value="mes">
+                        Este mes
+                    </label>
+                </div>
+
+                <!-- Botón -->
+                <button type="button" class="filtros_boton">Aplicar filtros</button>
+
+            </form>
+        </div>
+
+
         <div class="base_pagina">
                 <article class="nuevas_publicaciones"><!--La lista de Nuevo Contenido-->
-                    <ul class="contenidos_vista_home"><!--Mostrar los 5 mas nuevos-->
-                        <li class="cajas_vista_home">
+                    <ul class="contenidos_vista_catalogo"><!--Mostrar los 5 mas nuevos-->
+                        <li class="cajas_vista_catalogo">
                             <img src='../img/Asset 10.png' class="IMGCONT" alt="IMGCONT1" onmouseover="this.src='../img/Asset 11.png';" onmouseout="this.src='../img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
                                 <a class="titulo_contenido_home" href="paginas/publicacion.html">| Dedos y Dedales |</a>
-                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="descripcion_reducida">Un juego donde cada movimiento exige precisión quirúrgica. Los jugadores deben coordinar destrezas y tomar decisiones rápidas mientras administran recursos diminutos pero cruciales. Ideal para quienes disfrutan de desafíos táctiles y estrategias ágiles.</p>
                                 <p class="autor_p_home">- Ferni-10</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
@@ -59,7 +137,7 @@
                             <img src='../img/Asset 10.png' class="IMGCONT" alt="IMGCONT2" onmouseover="this.src='../img/Asset 11.png';" onmouseout="this.src='../img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
                                 <a class="titulo_contenido_home" href="./paginas/publicación.html">| Tablero Mortal |</a>
-                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="descripcion_reducida">Una experiencia intensa donde el tablero mismo es tu enemigo. Cada casilla puede ayudarte o condenarte, y solo quien interprete correctamente el riesgo logrará sobrevivir. Suspenso constante en un formato compacto y competitivo.</p>
                                 <p class="autor_p_home">- Laureano</p> 
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
@@ -71,7 +149,7 @@
                             <img src='../img/Asset 10.png' class="IMGCONT" alt="IMGCONT3" onmouseover="this.src='../img/Asset 11.png';" onmouseout="this.src='../img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
                                 <a class="titulo_contenido_home" href="./paginas/publicación.html">| Dados por doquier |</a>
-                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="descripcion_reducida">Un juego caótico y divertido centrado en la probabilidad y la improvisación. Con múltiples dados especiales, cada turno abre nuevas posibilidades inesperadas. Perfecto para quienes aman el azar con un toque estratégico.</p>
                                 <p class="autor_p_home">- Hola-Lola</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
@@ -83,7 +161,7 @@
                             <img src='../img/Asset 10.png' class="IMGCONT" alt="IMGCONT4" onmouseover="this.src='../img/Asset 11.png';" onmouseout="this.src='../img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
                                 <a class="titulo_contenido_home" href="./paginas/publicación.html">| Alpha minado |</a>
-                                <p class="descripcion_reducida">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat mollitia neque libero voluptatem fuga modi enim quis repellendus, vel nobis voluptatibus magnam. Iusto, et fugiat rem dolor commodi neque velit.</p>
+                                <p class="descripcion_reducida">Ambientado en un yacimiento futurista, los jugadores compiten por extraer recursos valiosos mientras evitan derrumbes y sabotajes. Gestión, riesgo y planificación se combinan para crear partidas tensas y muy dinámicas.</p>
                                 <p class="autor_p_home">- Paty-Carne-Doble</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
@@ -95,7 +173,7 @@
                             <img src='../img/Asset 10.png' class="IMGCONT" alt="IMGCONT5" onmouseover="this.src='../img/Asset 11.png';" onmouseout="this.src='../img/Asset 10.png';" />
                             <div class="contenido_cajas_vista_home">
                                 <a class="titulo_contenido_home" href="./paginas/publicación.html">| ¡Fuera del Plato! |</a>
-                                <p class="descripcion_reducida"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas         ddddddddddddddddddddddd sssssssssssssssssssssss</p>
+                                <p class="descripcion_reducida">Una propuesta ligera y humorística donde animales escurridizos hacen de las suyas mientras los jugadores intentan guiarlos de vuelta a su destino. Rápido, caótico y accesible, ideal para partidas casuales y familiares.</p>
                                 <p class="autor_p_home">- Jake-el-perro</p>
                             </div>
                             <a class="click_descarga" href="data:," download="Documento-del-Juego.pdf">
@@ -103,8 +181,8 @@
                                 <p class="nro_descargas">129 mil</p>
                             </a>
                         </li>
+                        <a href="./paginas/catalogo.html" class="boton_para_expandir"> Ver Más...</a>
                     </ul>
-                    <a href="./paginas/catalogo.html" class="boton_para_expandir"> Ver Más...</a>
                 </article>        
         </div>
     </main>
