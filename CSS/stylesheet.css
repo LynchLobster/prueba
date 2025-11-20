@@ -195,7 +195,8 @@ header input{
 main{
     background-color: rgb(185, 155, 107);
     height: max-content;
-    padding-bottom: 1px;
+    padding-bottom: 1px; /* Estos dos paddings porque sino ciertos margenes se escapaban del main */
+    padding-top: 1px;
 }
 
 .base_pagina{
@@ -510,6 +511,8 @@ footer{
 ======================================================================
 ======================================================================*/
 
+
+/* Pagina Nosotros */
 .contacto_section {
     margin: 3% 10%;
     background-color: rgba(255, 239, 168, 0.25);
@@ -581,7 +584,7 @@ footer{
 
 
 
-
+/* Pagina Perfil */
 .pagina_login{
     margin: 5% 30% 35% 30%;
     width: 100%;
@@ -592,13 +595,170 @@ footer{
     background-color:  rgb(105, 130, 105);
     border: 2px solid black;
 }
-
 .lista_contenido_catalogo{
     margin: 0 2% 0 2vw;
 }
 
 
+ /* Pagina Error */
+.error {
+    display: block;
+    height: 200%;
+    justify-content: center;
+}
 
+
+
+
+
+/* ================================
+   ESTILOS DE LA PÁGINA COMUNIDAD - AI
+================================ */
+
+/* Contenedor general */
+.comunidad_contenedor {
+    width: 100%;
+    background-color: rgb(185, 155, 107);
+    padding: 2% 5%;
+}
+
+/* Título principal */
+.comunidad_titulo {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Línea divisoria */
+.comunidad_divisor {
+    height: 3px;
+    background-color: rgb(105, 130, 105);
+    margin-bottom: 20px;
+}
+
+/* Lista general */
+.comunidad_lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada “caja” */
+.comunidad_item {
+    background-color: rgb(241, 219, 191);
+    border: 2px solid rgba(0, 0, 0, 0.366);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Título de la discusión */
+.comunidad_discusion_titulo {
+    font-family: "Prompt", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: rgb(51, 68, 51);
+}
+
+/* Referencia al juego */
+.comunidad_referencia {
+    color: rgb(138, 99, 0);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Texto reducido */
+.comunidad_texto {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    padding-right: 10%;
+    padding-left: 2%;
+    text-align: justify;
+}
+
+/* Autor */
+.comunidad_autor {
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: rgb(51, 68, 51);
+    margin-bottom: 5px;
+}
+
+/* Nro respuestas */
+.comunidad_respuestas {
+    font-size: 0.8rem;
+    font-variant: small-caps;
+    color: rgb(90, 75, 42);
+}
+
+/* ================================================
+   FILTROS - Página Comunidad - AI
+================================================ */
+
+.comunidad_filtros {
+    background-color: rgb(241, 219, 191);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 5% 40px 5%;
+    font-family: "Prompt", sans-serif;
+}
+
+.filtros_titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: rgb(51, 68, 51);
+}
+
+.filtros_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Bloque de filtros */
+.filtro_grupo {
+    background: rgba(255, 255, 255, 0.55);
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 5px solid rgb(124, 82, 23);
+}
+
+.filtro_subtitulo {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+/* Cada checkbox */
+.filtro_grupo label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+    font-weight: 450;
+}
+
+/* Botón */
+.filtros_boton {
+    background-color: rgb(124, 82, 23);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.filtros_boton:hover {
+    background-color: rgb(161, 108, 41);
+}
 
 
 /* [[FIN Css de las distintas paginas]] ===========================

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super pagina de hobbies</title>
-    <link rel="icon" href="../img/icon.ico"></link>
+    <link rel="icon" href="./img/icon.ico"></link>
     <link rel="stylesheet" href="../CSS/stylesheet.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,60 +39,133 @@
         </nav>
     </header>
     <main>
-        <section class="base_columna_derecha">
-            <h4>Filtros</h4>
-            <input type="text" name="Buscar titulos Discuciones" id="" placeholder="Buscar">
-            <div><!--Nose como hacer el slider de tiempo-->
-                <label><input type="checkbox" name="Nose1"><span>Filtro 1</span></label>
-                <label><input type="checkbox" name="Nose1"><span>Filtro 2</span></label>
-                <label><input type="checkbox" name="Nose1"><span>Filtro 3</span></label>
-                <label><input type="checkbox" name="Nose1"><span>Filtro 4</span></label>
-                <label><input type="checkbox" name="Nose1"><span>Filtro 5</span></label>
-                <label><input type="checkbox" name="Nose1"><span>Filtro 6</span></label>
-            </div>
-        </section>
-                
-        <article class="info_columna_der"><!--Este debe estas segunfo en la columna-->
-            <ul><!--Mostrar los 5 mas nuevos-->
-                <li class="nuevas_discuciones_home">
-                    <a class="titulo_discucion_home"  href="#">¿Cartón o mejor papél?</a>
-                    <a href="#" class="referencia_a_contenido"> |  Submarino de papel  |</a>
-                    <p class="discucion_reducida"> "Este juego me parece que utiliza muy bien el recurso del carton corrugado para hacer el efecto del agua. Pero al agrandar el mapa se puede volver costoso si no se usa papél con reemplazo." </p>
-                    <p class="discutor_home">- Lego-Lass</p>
-                    <p class="nro_respuestas_home">200 respuestas...</p>
-                </li>
-                <li class="nuevas_discuciones_home">
-                    <a class="titulo_discucion_home" href="#" >Bueno pero lento</a> 
-                    <a href="#" class="referencia_a_contenido"> |  Ajedrez 2  |</a>
-                    <p class="discucion_reducida"> </p>
-                    <p class="discutor_home">- Lord-Esteban</p>
-                    <p class="nro_respuestas_home">25 respuestas...</p>
-                </li>
-                <li class="nuevas_discuciones_home">
-                    <a class="titulo_discucion_home" href="#" >Me hace acordar a...</a> 
-                    <a href="#" class="referencia_a_contenido"> |  Manchon Attack  |</a>
-                    <p class="discucion_reducida"> </p>
-                    <p class="discutor_home">- El-pipe-112</p> 
-                    <p class="nro_respuestas_home">18 respuestas...</p>
-                </li>
-                <li class="nuevas_discuciones_home">
-                    <a class="titulo_discucion_home" href="#" >No debo se el unico...</a> 
-                    <a href="#" class="referencia_a_contenido"> |  Dedos y Dedales  |</a>
-                    <p class="discucion_reducida"> </p>
-                    <p class="discutor_home">- Saint-Alejandra</p> 
-                    <p class="nro_respuestas_home">15 respuestas...</p>
-                </li>
-                <li class="nuevas_discuciones_home">
-                    <a class="titulo_discucion_home" href="#" >¡Al fin lo que buscaba!</a> 
-                    <a href="#" class="referencia_a_contenido"> |  Escalatina 2.0  |</a>
-                    <p class="discucion_reducida"> </p>
-                    <p class="discutor_home">- Santoro-Leo</p> 
-                    <p class="nro_respuestas_home">9 respuestas...</p>
-                </li>
-            </ul>
-            <a href="./paginas/comunidad.html" class="boton_para_expandir"> Ver Más...</a>
+        <div class="comunidad_filtros"> <!-- AI -->
 
-        </article>        
+            <h3 class="filtros_titulo">Filtrar discusiones</h3>
+
+            <form class="filtros_form">
+
+                <!-- Filtro por categoría -->
+                <div class="filtro_grupo">
+                    <h4 class="filtro_subtitulo">Categoría</h4>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="materiales">
+                        Materiales
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="mecanicas">
+                        Mecánicas
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="arte">
+                        Arte y Diseño
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="categoria" value="reglas">
+                        Reglas / Balance
+                    </label>
+                </div>
+
+                <!-- Filtro por popularidad -->
+                <div class="filtro_grupo">
+                    <h4 class="filtro_subtitulo">Popularidad</h4>
+
+                    <label>
+                        <input type="checkbox" name="popularidad" value="mas100">
+                        Más de 100 respuestas
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="popularidad" value="mas20">
+                        Más de 20 respuestas
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="popularidad" value="nuevo">
+                        Nuevas (menos de 5 respuestas)
+                    </label>
+                </div>
+
+                <!-- Filtro por fecha -->
+                <div class="filtro_grupo">
+                    <h4 class="filtro_subtitulo">Fecha</h4>
+
+                    <label>
+                        <input type="checkbox" name="fecha" value="hoy">
+                        Hoy
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="fecha" value="semana">
+                        Esta semana
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="fecha" value="mes">
+                        Este mes
+                    </label>
+                </div>
+
+                <!-- Botón -->
+                <button type="button" class="filtros_boton">Aplicar filtros</button>
+
+            </form>
+        </div>
+                
+        <section class="comunidad_contenedor">
+
+            <h2 class="comunidad_titulo">Discusiones de la Comunidad</h2>
+            <div class="comunidad_divisor"></div>
+
+            <ul class="comunidad_lista">
+
+                <li class="comunidad_item">
+                    <a class="comunidad_discusion_titulo" href="#">¿Cartón o mejor papel?</a>
+                    <a href="#" class="comunidad_referencia"> | Submarino de papel | </a>
+                    <p class="comunidad_texto">"Este juego usa bien el cartón corrugado..."</p>
+                    <p class="comunidad_autor">- Lego-Lass</p>
+                    <p class="comunidad_respuestas">200 respuestas...</p>
+                </li>
+
+                <li class="comunidad_item">
+                    <a class="comunidad_discusion_titulo" href="#">Bueno pero lento</a>
+                    <a href="#" class="comunidad_referencia"> | Ajedrez 2 | </a>
+                    <p class="comunidad_texto">"Este juego usa bien el cartón corrugado..."</p>
+                    <p class="comunidad_autor">- Lord-Esteban</p>
+                    <p class="comunidad_respuestas">25 respuestas...</p>
+                </li>
+
+                <li class="comunidad_item">
+                    <a class="comunidad_discusion_titulo" href="#">Me hace acordar a...</a>
+                    <a href="#" class="comunidad_referencia"> | Manchon Attack | </a>
+                    <p class="comunidad_texto">"Este juego usa bien el cartón corrugado..."</p>
+                    <p class="comunidad_autor">- El-pipe-112</p>
+                    <p class="comunidad_respuestas">18 respuestas...</p>
+                </li>
+
+                <li class="comunidad_item">
+                    <a class="comunidad_discusion_titulo" href="#">No debo ser el único...</a>
+                    <a href="#" class="comunidad_referencia"> | Dedos y Dedales | </a>
+                    <p class="comunidad_texto">"Este juego usa bien el cartón corrugado..."</p>
+                    <p class="comunidad_autor">- Saint-Alejandra</p>
+                    <p class="comunidad_respuestas">15 respuestas...</p>
+                </li>
+
+                <li class="comunidad_item">
+                    <a class="comunidad_discusion_titulo" href="#">¡Al fin lo que buscaba!</a>
+                    <a href="#" class="comunidad_referencia"> | Escalatina 2.0 | </a>
+                    <p class="comunidad_texto">"Este juego usa bien el cartón corrugado..."</p>
+                    <p class="comunidad_autor">- Santoro-Leo</p>
+                    <p class="comunidad_respuestas">9 respuestas...</p>
+                </li>
+
+            </ul>
+
+        </section>
 
     </main>
     <footer><!--fin de pagina que contiene toda la letra chica-->
