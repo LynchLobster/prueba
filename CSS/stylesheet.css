@@ -4,6 +4,15 @@
     line-height: 1.3;
 }
 
+/* MENSAJE PARA EL QUE LEA
+
+-La direncia entre mis comentarios y lo que coloca la AI es mas que nada el correcto uso de mayusculas, signos de puntuación y horrores de ortografia (yo no lo respeto jaja)
+-Los comentarios a modo de saparadores los puse yo para facilitarme la lectura del css
+-De igual manera esta todo lo hecho por Ai segregado al fondo del css
+
+*/
+
+
 /*VV Debajo de esto esta el CSS Global VV*/
 
 h1{
@@ -158,7 +167,6 @@ header input{
     border-radius: 5px;
 }
 
-
 #accesos button:hover {
     border: 1px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
@@ -179,7 +187,7 @@ header input{
         margin: 10px 0;
     }
 
-    #accesos {
+    #accesos { /* Esto porque no sabia como hacer que deje de moverse a lugares que no queria */
         display: none;
     }
 }
@@ -195,7 +203,7 @@ header input{
 main{
     background-color: rgb(185, 155, 107);
     height: max-content;
-    padding-bottom: 1px; /* Estos dos paddings porque sino ciertos margenes se escapaban del main */
+    padding-bottom: 1px; /* Estos dos paddings los puse porque sino ciertos margenes se escapaban del main */
     padding-top: 1px;
 }
 
@@ -506,6 +514,158 @@ footer{
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 
+/* ------------hecho con ayuda de ai---------------------------------
+---------------------------------------------------------------
+--------------------------------------------------------------- */
+
+.drop_archivo input[type="file"] {
+    display: none; /* Oculta el input real */
+}
+.drop_label {
+    display: block;
+    width: 100%;
+    height: 230px;
+    cursor: pointer;
+    /* Imagen cuando NO hay hover */
+    background-image: url("../img/Asset 12.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.drop_label:hover { /* Imagen cuando HAY hover */
+    background-image: url("../img/Asset 13.png");
+}
+.carrusel input[type="radio"] { /* Ocultamos los radio buttons del carrousel */
+    display: none;
+}
+.slides { /* Contiene los 3 slides */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+.slide { /* Cada slide ocupa 100% del carrusel */
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    padding-top: 10px;
+    }
+/* Ajuste de las imágenes del carrusel */
+
+.descripcion { /* Texto descriptivo de las imagenes*/
+    font-size: 1.2rem;
+    margin: 10px;
+    font-weight: bold;
+}
+.controles {/* Botones del carrusel */
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+.controles label {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 0.8rem;
+}
+/* Movimiento del carrusel (MAGIA del CSS jajaj) */
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+
+#slide1:checked ~ .controles label[for="slide1"],
+#slide2:checked ~ .controles label[for="slide2"],
+#slide3:checked ~ .controles label[for="slide3"] {
+    background: rgb(105, 130, 105);
+    border-color: black;
+}
+
+/* Cada slide ocupa 100% del carrusel */
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;   /* ← NECESARIO */
+}
+
+/* El enlace contiene imagen + overlay */
+.slide_link {
+    position: relative;   /* ← FUNDAMENTAL */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagen del slide */
+.imagen {
+    width: 100%;
+    height: 100%;    
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgb(105, 130, 105);
+}
+
+/* Overlay */
+.overlay_texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 0 0 30px 0;
+    padding: 10px;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    border-radius: 0 0 10px 10px; /* sigue la curva de la imagen */
+}
+
+.overlay_texto h3, .overlay_texto p {
+    margin: 5px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+
+
+.prefooter-grid {
+    display: grid;    /* Dos columnas iguales */
+    grid-template-columns: 1fr 1fr;    /* Dos filas automáticas */
+    grid-template-rows: auto auto;  
+    grid-template-areas:
+        "a b"
+        "c d";
+    gap: 20px; /* separación entre elementos, opcional */
+    padding: 20px; /* para que respire */    
+
+    .img1   { grid-area: b; } /* Hola soy agus comentando, este img1 (viendolo en VisualStudio) no logro corregir que tenga el color de un elemento activo. aun así este funciona asi que lo deje como está*/
+    .texto1 { grid-area: a; }
+    .texto2 { grid-area: d; }
+    .img2   { grid-area: c; }
+
+}
+.prefooter-grid img { /* Cada área asignada */
+    width: 100%;
+    height: 100%;
+    object-fit: fill;   /* ← respeta proporciones SIN recortar */
+    object-position: center;
+    display: block;
+}
+
+
+
 
 /* [[Css de las distintas paginas]] ====================================
 ======================================================================
@@ -562,21 +722,6 @@ footer{
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -708,9 +853,10 @@ footer{
     font-family: "Prompt", sans-serif;
 }
 
+
 .filtros_titulo {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 15px;
     color: rgb(51, 68, 51);
 }
@@ -719,6 +865,7 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-items: center;
 }
 
 /* Bloque de filtros */
@@ -727,16 +874,18 @@ footer{
     padding: 12px 15px;
     border-radius: 8px;
     border-left: 5px solid rgb(124, 82, 23);
+    display: inline;  /* Esto lo agregue yo porque la AI lo puso en Bloque y no me gustaba */
 }
 
 .filtro_subtitulo {
+    display: block;
     font-size: 1.05rem;
     margin-bottom: 6px;
+    font-weight: 600;
 }
 
 /* Cada checkbox */
 .filtro_grupo label {
-    display: flex;
     align-items: center;
     gap: 8px;
     margin: 4px 0;
@@ -764,176 +913,6 @@ footer{
 /* [[FIN Css de las distintas paginas]] ===========================
 ======================================================================
 ======================================================================*/
-
-
-
-
-
-
-
-
-
-/* ------------hecho con ayuda de ai---------------------------------
----------------------------------------------------------------
---------------------------------------------------------------- */
-
-.drop_archivo input[type="file"] {
-    display: none; /* Oculta el input real */
-}
-.drop_label {
-    display: block;
-    width: 100%;
-    height: 230px;
-    cursor: pointer;
-    /* Imagen cuando NO hay hover */
-    background-image: url("../img/Asset 12.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.drop_label:hover { /* Imagen cuando HAY hover */
-    background-image: url("../img/Asset 13.png");
-}
-.carrusel input[type="radio"] { /* Ocultamos los radio buttons del carrousel */
-    display: none;
-}
-.slides { /* Contiene los 3 slides */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    
-}
-.slide { /* Cada slide ocupa 100% del carrusel */
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    text-align: center;
-    padding-top: 10px;
-    }
-/* Ajuste de las imágenes del carrusel */
-
-.descripcion { /* Texto descriptivo de las imagenes*/
-    font-size: 1.2rem;
-    margin: 10px;
-    font-weight: bold;
-}
-.controles {/* Botones del carrusel */
-    position: absolute;
-    bottom: 10px;
-    display: flex;
-    gap: 10px;
-}
-.controles label {
-    width: 15px;
-    height: 15px;
-    background: white;
-    border: 1px solid black;
-    border-radius: 50%;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    font-size: 0.8rem;
-}
-/* Movimiento del carrusel (MAGIA del CSS jajaj) */
-#slide1:checked ~ .slides { transform: translateX(0%); }
-#slide2:checked ~ .slides { transform: translateX(-100%); }
-#slide3:checked ~ .slides { transform: translateX(-200%); }
-
-#slide1:checked ~ .controles label[for="slide1"],
-#slide2:checked ~ .controles label[for="slide2"],
-#slide3:checked ~ .controles label[for="slide3"] {
-    background: rgb(105, 130, 105);
-    border-color: black;
-}
-
-/* Cada slide ocupa 100% del carrusel */
-.slide {
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    position: relative;   /* ← NECESARIO */
-}
-
-/* El enlace contiene imagen + overlay */
-.slide_link {
-    position: relative;   /* ← FUNDAMENTAL */
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-/* Imagen del slide */
-.imagen {
-    width: 100%;
-    height: 100%;    
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid rgb(105, 130, 105);
-}
-
-/* Overlay */
-.overlay_texto {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    margin: 0 0 30px 0;
-    padding: 10px;
-
-    background: rgba(0, 0, 0, 0.55);
-    color: white;
-
-    border-radius: 0 0 10px 10px; /* sigue la curva de la imagen */
-}
-
-.overlay_texto h3, .overlay_texto p {
-    margin: 5px;
-  font-family: "Prompt", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-.prefooter-grid {
-    display: grid;    /* Dos columnas iguales */
-    grid-template-columns: 1fr 1fr;    /* Dos filas automáticas */
-    grid-template-rows: auto auto;  
-    grid-template-areas:
-        "a b"
-        "c d";
-    gap: 20px; /* separación entre elementos, opcional */
-    padding: 20px; /* para que respire */    
-
-    .img1   { grid-area: b; }
-    .texto1 { grid-area: a; }
-    .texto2 { grid-area: d; }
-    .img2   { grid-area: c; }
-
-}
-.prefooter-grid img { /* Cada área asignada */
-    width: 100%;
-    height: 100%;
-    object-fit: fill;   /* ← respeta proporciones SIN recortar */
-    object-position: center;
-    display: block;
-}
-
-
-
-
 
 
 
