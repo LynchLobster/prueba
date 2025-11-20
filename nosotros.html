@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super pagina de hobbies</title>
+    <link rel="icon" href="../img/icon.ico"></link>
+    <link rel="stylesheet" href="../CSS/stylesheet.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="head_info">
+            <a href="/index.html"><img src="img/el_gabi.png" alt="logo vectorizado" class="logo"></a>
+            
+            <form action="X" id="barra_busqueda">
+                
+                <input class="caja_de_busqueda" type="text" id="caja_de_busqueda" placeholder="Barra de busqueda" >
+
+            </form>
+
+            <form action="/login" method="POST" id="accesos">
+                <label for="usuario"></label>
+                <input type="email" id="usuario" name="usuario" placeholder="Usuario" required>
+
+                <label for="contraseña"></label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
+
+                <button type="submit" class="boton_login">Iniciar sesión</button>
+            </form>
+        </div>
+        <nav class=barra_nav_pag>
+            <a href="paginas/catalogo.html"  title="Ir a Catálogo" class="botones_del_nav">Catálogo</a></li>
+            <a href="../paginas/comunidad.html" title="Ir a Comunidad" class="botones_del_nav">Comunidad</a></li>
+            <a href="../paginas/nosotros.html" title="Ir a Sobre Nosotros" class="botones_del_nav">Nosotros</a></li>
+            <a href="../paginas/perfil.html" title="Ir a tu Perfil" class="botones_del_nav">Perfil</a></li>
+        </nav>
+    </header>
+    <main>
+        <div class="base_pagina"> </div>
+            <section class="pre_footer">
+                <div class="prefooter-grid">
+
+                    <div class="img1" >
+                        <img src="../img/archive-7548483_960_720.jpg" alt="">
+                    </div>
+
+                    <div class="texto1">
+                        <h1 class="titulo_us_home">Sobre Nosotros</h1>
+                        <p class="texto_us_home">Somos una comunidad dedicada a celebrar la creatividad lúdica. En nuestra página recopilamos juegos de mesa originales creados por personas de todo el mundo, brindando un espacio para compartir ideas, experimentar nuevas mecánicas y descubrir propuestas únicas. Nuestro objetivo es fomentar la imaginación y ofrecer un lugar accesible donde cualquiera pueda mostrar su obra.</p>
+                    </div>
+
+                    <div class="texto2">
+                        <p class="texto_us_home">Creemos que cada juego cuenta una historia distinta y merece ser visto. Por eso mantenemos un repositorio abierto, curado y en constante crecimiento, donde valoramos la diversidad, la innovación y la colaboración. Invitamos a todos los entusiastas, desde aficionados hasta diseñadores experimentados, a contribuir con sus creaciones. Además, trabajamos continuamente para mejorar la plataforma, promover eventos comunitarios y facilitar recursos que ayuden a transformar simples conceptos en experiencias de juego significativas y accesibles para todos. Impulsamos la imaginación colectiva y celebramos cada aporte enviado!</p>
+                    </div>
+
+                    <div class="img2" >
+                        <img src="../img/library-repository-archive-feature.png" alt="">
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <section class="contacto_section">
+            <h1>Contáctanos</h1>
+            <p>Si tenés dudas, sugerencias o querés enviarnos un mensaje, completá el formulario:</p>
+
+            <form class="form_contacto" onsubmit="enviarMock(event)">
+                
+                <label for="nombre">Tu nombre o Usuario</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
+
+                <label for="email">Tu correo electrónico</label>
+                <input type="email" id="email" name="email" required placeholder="ejemplo@email.com">
+
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required placeholder="Motivo del mensaje">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required placeholder="Escribí tu mensaje aquí"></textarea>
+
+                <button type="submit" class="btn_contacto">Enviar mensaje</button>
+
+                <p id="estado_envio" class="estado_envio"></p>
+
+            </form>
+        </section>
+
+    </main>
+    <footer><!--fin de pagina que contiene toda la letra chica-->
+        <span>
+            <a href="#">Instragam</a>
+            |
+            <a href="#">Mapa de sitio</a>
+            |
+            <a href=""></a>
+        </span>
+        <span>
+            <a href="#">Cookies</a>
+            |
+            <a href="#">Terminos y Condiciones</a>
+        </span>
+        <div>© 2025 - 2025 / Agustín Rodríguez Inc.</div>
+    </footer>
+</body>
+</html>
